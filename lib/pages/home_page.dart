@@ -1,6 +1,7 @@
 import 'package:comparador_combustivel/widgets/input_widget.dart';
 import 'package:comparador_combustivel/widgets/loading_buttom_widget.dart';
 import 'package:comparador_combustivel/widgets/logo_widget.dart';
+import 'package:comparador_combustivel/widgets/submit_form_widget.dart';
 import 'package:comparador_combustivel/widgets/success_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
@@ -20,19 +21,11 @@ class HomePage extends StatelessWidget {
             reset: () {},
             result: "Compensa Utilizar",
           ),
-          InputWidget(
-            label: "Alcool",
-            ctrl: _alcCtrl,
-          ),
-          InputWidget(
-            label: "Gasolina",
-            ctrl: _gasCtrl,
-          ),
-          LoadingButtomWidget(
-            busy: true,
-            invert: false,
-            func: () {},
-            text: "CALCULAR",
+          SubmitFormWidget(
+            alcCtrl: _alcCtrl,
+            gasCtrl: _gasCtrl,
+            submitFunc: () {},
+            busy: false,
           ),
         ],
       ),
