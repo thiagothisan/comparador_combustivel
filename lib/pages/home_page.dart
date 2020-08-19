@@ -1,6 +1,7 @@
 import 'package:comparador_combustivel/widgets/input_widget.dart';
 import 'package:comparador_combustivel/widgets/loading_buttom_widget.dart';
 import 'package:comparador_combustivel/widgets/logo_widget.dart';
+import 'package:comparador_combustivel/widgets/success_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_masked_text/flutter_masked_text.dart';
 
@@ -15,37 +16,9 @@ class HomePage extends StatelessWidget {
       body: ListView(
         children: <Widget>[
           LogoWidget(),
-          Container(
-            margin: EdgeInsets.all(30),
-            decoration: BoxDecoration(
-              color: Colors.white.withOpacity(0.8),
-              borderRadius: BorderRadius.circular(25),
-            ),
-            child: Column(
-              children: <Widget>[
-                SizedBox(
-                  height: 50,
-                ),
-                Text(
-                  "Compensa utilizar álcool",
-                  style: TextStyle(
-                    color: Theme.of(context).primaryColor,
-                    fontSize: 40,
-                    fontFamily: "Big Shoulders Display",
-                  ),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(
-                  height: 20,
-                ),
-                LoadingButtomWidget(
-                  busy: false,
-                  invert: true,
-                  func: () {},
-                  text: "CALCULAR NOVAMENTE",
-                ),
-              ],
-            ),
+          SuccessWidget(
+            reset: () {},
+            result: "Compensa Utilizar",
           ),
           InputWidget(
             label: "Alcool",
