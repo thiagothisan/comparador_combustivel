@@ -10,10 +10,10 @@ class SubmitFormWidget extends StatelessWidget {
   bool busy = false;
   Function submitFunc;
   SubmitFormWidget({
-    @required gasCtrl,
-    @required alcCtrl,
-    @required busy,
-    @required submitFunc,
+    @required this.gasCtrl,
+    @required this.alcCtrl,
+    @required this.busy,
+    @required this.submitFunc,
   });
   @override
   Widget build(BuildContext context) {

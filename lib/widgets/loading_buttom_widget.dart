@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 
 class LoadingButtomWidget extends StatelessWidget {
-  bool busy;
-  bool invert;
+  bool busy = false;
+  bool invert = false;
   Function func;
-  String text;
+  String text = "";
 
   LoadingButtomWidget({
     @required this.busy,
